@@ -128,6 +128,6 @@ print("\n --- \n")
 
 let arrayLetters = ["A", "B", "C", "D"]
 
-for letra in arrayLetters {
-    print(letra)
+for letter in arrayLetters {
+    print(letter)
 }
