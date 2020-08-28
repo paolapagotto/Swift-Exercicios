@@ -102,6 +102,11 @@ var dictionary3 = ["nome": "Paola", "sobrenome": "Pagotto", "curso": "iOS"]
 
 //print(dictionary3)
 
+var dictionaryX = [String: Int]()
+dictionaryX["joão"] = 10
+dictionaryX["maria"] = 8
+dictionaryX["helena"] = 7
+print(dictionaryX)
 
 // LOOP
 
@@ -130,4 +135,8 @@ let arrayLetters = ["A", "B", "C", "D"]
 
 for letter in arrayLetters {
     print(letter)
+}
+
+for i in 0..<arrayLetters.count {
+    print("Indice \(i)")
 }
