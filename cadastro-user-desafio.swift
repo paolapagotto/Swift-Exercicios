@@ -9,24 +9,48 @@
 import UIKit
 
 
+protocol AddUser {
+    func getUser()
+}
 
-class User {
+class User: AddUser {
+    var userId: Int
     var email:String
     var password:String
-    init(email:String, password:String) {
+    init(userId:Int, email:String, password:String) {
+        self.userId = userId
         self.email = email
         self.password = password
     }
     
-    private func newUser(email: String) -> Bool {
+    func getUser(){
         if self.email == email{
             print("This user already exists")
-            return false
+        } else {
+            userId += 1
+            print("New User: \(email)")
         }
-        return true
     }
 }
 
+class userData {
+    
+    private var userList = [AddUser]()
+    
+    func addUserToList(user: AddUser) {
+        userList.append(user)
+    }
+    
+    func printUserList() {
+        for user in userList{
+            print(user)
+        }
+    }
+    
+    private func userCard(user: AddUser){
+        user.getUser()
+    }
+}
 
 class ViewController: UIViewController {
 
